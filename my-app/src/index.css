@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  background-image: url(/src/img/background.jpg);
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+}
+
+.current {
+  margin-top: 64px;
+  text-align: center;
+  margin-bottom: 81px;
+}
+
+.current_city {
+  font-size: 36px;
+}
+
+.current_temp {
+  font-size: 96px;
+  font-weight: 300;
+}
+
+.forecast_name {
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 60px;
+}
+
+.forecast_time {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.forecast_temp_day {
+  text-align: start;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.forecast_temp_night {
+  text-align: end;
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 50%;
+  margin-bottom: 123px;
+}
+
+.current_description {
+  font-size: 24px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast_item {
+  text-align: center;
+  margin: 49px 129px 0px 80px;
+}
+
+.temp_icon {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 43%;
+}
+
+.details {
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 60px;
+  padding-bottom: 8px;
+}
+
+.rectangles{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.rectangle {
+  position: absolute;
+  width: 620px;
+  height: 1px;
+  left: 60px;
+  background: #FFFFFF;
+  opacity: 0.25;
+  border-radius: 8px;
+}
+.second_rectangle{
+  width: 390px;
+  height: 1px;
+  background: #FFFFFF;
+  opacity: 0.25;
+  border-radius: 8px;
+  margin-left: 832px;
+}
+
+.details_name {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.details_col{
+  display: flex;
+  flex-direction: row;
+  padding-right: 100px;
+}
+
+.details_row{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 32px;
+}
+
+.details_item{
+  font-size: 24px;
+  margin-left: 60px;
+  font-weight: 300;
+  padding-right: 116px;
+}
+
+.details_item2{
+  font-size: 24px;
+  margin-left: 60px;
+  font-weight: 300;
+  padding-right: 136px;
+}
+
+.details_name{
+  padding-bottom: 16px;
+}
+.layout{
+  display: flex;
+  flex-direction: column;
+    width: 145px;
+    height: 160px;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    padding-left: 16px;
+}
