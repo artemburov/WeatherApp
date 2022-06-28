@@ -1,6 +1,6 @@
 import React from "react";
-import png from'./subtract.png';
-import vector from'./vector.png';
+import png from './subtract.png';
+import vector from './vector.png';
 
 class Form extends React.Component {
     constructor() {
@@ -79,7 +79,7 @@ class Form extends React.Component {
                 <div className="current">
                     <div className="current_city">Димитровград</div>
                     <div className="temp_icon">
-                        <img src={iconUrl} alt={weatherData.description} width="120" height="120"/>
+                        <img src={iconUrl} alt={weatherData.description} width="120" height="120" />
                         <div className="current_temp">{Math.round(weatherData.main.temp) + '°'}</div>
                     </div>
                     <div className="current_description">{weatherData.weather[0]['description']}</div>
@@ -88,12 +88,10 @@ class Form extends React.Component {
                 <div className="forecast_name">По дням</div>
                 <div className="forecast">
                     <div className="forecast_item">
-                    <div className="layout">
                         <div className="forecast_time">Сегодня</div>
                         <img src={iconUrlFirstDay} alt={weatherDataWeek.description} width="60" height="60" />
                         <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[0].temp.day) + '°'}</div>
                         <div className="forecast_temp_night" >{Math.round(weatherDataWeek.daily[0].temp.night) + '°'} </div>
-                    </div>
                     </div>
                     <div className="forecast_item">
                         <div className="forecast_time">Завтра</div>
@@ -132,44 +130,43 @@ class Form extends React.Component {
                         <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[6].temp.night) + '°'}</div>
                     </div>
                 </div>
-
                 <div className="details">Подробности</div>
                 <div className="rectangles">
                     <div className="rectangle"></div>
                     <div className="second_rectangle"></div>
                 </div>
-                <div className="details_row">
-                    <div className="details_item">
-                        <div className="details_name">По ощущениям</div>
-                        <div className="details_value">{Math.round(weatherData.main.feels_like) + '°'}</div>
+                <div className="block_details">
+                    <div className="details_row">
+                        <div className="details_item">
+                            <div className="details_name">По ощущениям</div>
+                            <div className="details_value">{Math.round(weatherData.main.feels_like) + '°'}</div>
+                        </div>
+                        <div className="details_item">
+                            <div className="details_name">Влажность</div>
+                            <div className="details_value">{Math.round(weatherData.main.humidity) + '%'}</div>
+                        </div>
+                        <div className="details_item">
+                            <div className="details_name">Видимость</div>
+                            <div className="details_value">{(weatherDataWeek.current.visibility) / 1000 + ' км'}</div>
+                        </div>
+                        <div className="details_item">
+                            <div className="details_name">Давление</div>
+                            <div className="details_value">{Math.round((weatherData.main.grnd_level) / 1.33) + ' мм'}</div>
+                        </div>
+                        <div className="details_item">
+                            <div className="details_name">Ветер</div>
+                            <div className="details_value"><img src={vector} width="14" height="14" /> {Math.round(weatherData.wind.speed) + ' м/c'}</div>
+                        </div>
                     </div>
-                    <div className="details_item">
-                        <div className="details_name">Влажность</div>
-                        <div className="details_value">{Math.round(weatherData.main.humidity) + '%'}</div>
-                    </div>
-                    <div className="details_item">
-                        <div className="details_name">Видимость</div>
-                        <div className="details_value">{(weatherDataWeek.current.visibility)/1000 + ' км'}</div>
-                    </div>
-                    <div className="details_item">
-                        <div className="details_name">Закат</div>
-                        <div className="details_value"><img src={png} width="41" height="18" />   {localizedSunset}</div>
-                    </div>
-                    <div className="details_item">
-                        <div className="details_name">Восход</div>
-                        <div className="details_value"><img src={png} width="41" height="18" /> {localizedSunrise}</div>
-                    </div>
-                </div>
-
-
-                <div className="details_col">
-                    <div className="details_item2">
-                        <div className="details_name">Давление</div>
-                        <div className="details_value">{Math.round((weatherData.main.grnd_level) / 1.33) + ' мм'}</div>
-                    </div>
-                    <div className="details_item2">
-                        <div className="details_name">Ветер</div>
-                        <div className="details_value"><img src={vector} width="14" height="14" /> {Math.round(weatherData.wind.speed) + ' м/c'}</div>
+                    <div className="details_col">
+                        <div className="details_item2">
+                            <div className="details_name">Восход</div>
+                            <div className="details_value"><img src={png} width="41" height="18" /> {localizedSunrise}</div>
+                        </div>
+                        <div className="details_item2">
+                            <div className="details_name">Закат</div>
+                            <div className="details_value"><img src={png} width="41" height="18" /> {localizedSunset}</div>
+                        </div>
                     </div>
                 </div>
             </form>
