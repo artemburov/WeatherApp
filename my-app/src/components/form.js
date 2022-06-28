@@ -84,7 +84,6 @@ class Form extends React.Component {
                     </div>
                     <div className="current_description">{weatherData.weather[0]['description']}</div>
                 </div>
-
                 <div className="forecast_name">По дням</div>
                 <div className="forecast">
                     <div className="forecast_item">
