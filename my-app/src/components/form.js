@@ -88,47 +88,61 @@ class Form extends React.Component {
                 <div className="forecast">
                     <div className="forecast_item">
                         <div className="forecast_time">Сегодня</div>
-                        <img src={iconUrlFirstDay} alt={weatherDataWeek.description} width="60" height="60" />
-                        <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[0].temp.day) + '°'}</div>
-                        <div className="forecast_temp_night" >{Math.round(weatherDataWeek.daily[0].temp.night) + '°'} </div>
+                        <img className="icon_day" src={iconUrlFirstDay} alt={weatherDataWeek.description} width="60" height="60" />
+                        <div className="day_night">
+                            <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[0].temp.day) + '°'}</div>
+                            <div className="forecast_temp_night" >{Math.round(weatherDataWeek.daily[0].temp.night) + '°'} </div>
+                        </div>
                     </div>
                     <div className="forecast_item">
                         <div className="forecast_time">Завтра</div>
-                        <img src={iconUrlSecondDay} alt={weatherDataWeek.description} width="60" height="60" />
-                        <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[1].temp.day) + '°'}</div>
-                        <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[1].temp.night) + '°'}</div>
+                        <img className="icon_day" src={iconUrlSecondDay} alt={weatherDataWeek.description} width="60" height="60" />
+                        <div className="day_night">
+                            <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[1].temp.day) + '°'}</div>
+                            <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[1].temp.night) + '°'}</div>
+                        </div>
                     </div>
                     <div className="forecast_item">
                         <div className="forecast_time">{localizedThirdDay}</div>
-                        <img src={iconUrlThirdDay} alt={weatherDataWeek.description} width="60" height="60" />
-                        <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[2].temp.day) + '°'}</div>
-                        <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[2].temp.night) + '°'}</div>
+                        <img className="icon_day" src={iconUrlThirdDay} alt={weatherDataWeek.description} width="60" height="60" />
+                        <div className="day_night">
+                            <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[2].temp.day) + '°'}</div>
+                            <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[2].temp.night) + '°'}</div>
+                        </div>
                     </div>
                     <div className="forecast_item">
                         <div className="forecast_time">{localizedFourthdDay}</div>
-                        <img src={iconUrlFourthDay} alt={weatherDataWeek.description} width="60" height="60" />
-                        <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[3].temp.day) + '°'}</div>
-                        <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[3].temp.night) + '°'}</div>
-                    </div>
+                        <img className="icon_day" src={iconUrlFourthDay} alt={weatherDataWeek.description} width="60" height="60" />
+                        <div className="day_night">
+                            <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[3].temp.day) + '°'}</div>
+                            <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[3].temp.night) + '°'}</div>
+                        </div>
+                    </div >
                     <div className="forecast_item">
                         <div className="forecast_time">{localizedFifthDay}</div>
-                        <img src={iconUrlFifthDay} alt={weatherDataWeek.description} width="60" height="60" />
-                        <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[4].temp.day) + '°'}</div>
-                        <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[4].temp.night) + '°'}</div>
+                        <img className="icon_day" src={iconUrlFifthDay} alt={weatherDataWeek.description} width="60" height="60" />
+                        <div className="day_night">
+                            <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[4].temp.day) + '°'}</div>
+                            <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[4].temp.night) + '°'}</div>
+                        </div>
                     </div>
                     <div className="forecast_item">
                         <div className="forecast_time">{localizedSixthDay}</div>
-                        <img src={iconUrlSixthDay} alt={weatherDataWeek.description} width="60" height="60" />
-                        <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[5].temp.day) + '°'}</div>
-                        <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[5].temp.night) + '°'}</div>
+                        <img className="icon_day" src={iconUrlSixthDay} alt={weatherDataWeek.description} width="60" height="60" />
+                        <div className="day_night">
+                            <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[5].temp.day) + '°'}</div>
+                            <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[5].temp.night) + '°'}</div>
+                        </div>
                     </div>
                     <div className="forecast_item">
                         <div className="forecast_time">{localizedSeventhDay}</div>
-                        <img src={iconUrlSeventhDay} alt={weatherDataWeek.description} width="60" height="60" />
-                        <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[6].temp.day) + '°'}</div>
-                        <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[6].temp.night) + '°'}</div>
-                    </div>
-                </div>
+                        <img className="icon_day" src={iconUrlSeventhDay} alt={weatherDataWeek.description} width="60" height="60" />
+                        <div className="day_night">
+                            <div className="forecast_temp_day">{Math.round(weatherDataWeek.daily[6].temp.day) + '°'}</div>
+                            <div className="forecast_temp_night">{Math.round(weatherDataWeek.daily[6].temp.night) + '°'}</div>
+                        </div>
+                    </div >
+                </div >
                 <div className="details">Подробности</div>
                 <div className="rectangles">
                     <div className="rectangle"></div>
@@ -168,7 +182,7 @@ class Form extends React.Component {
                         </div>
                     </div>
                 </div>
-            </form>
+            </form >
         );
     }
 }
