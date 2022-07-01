@@ -41,7 +41,7 @@ body {
 }
 
 .icon_day {
-  margin-left: 10px
+  margin-left: 4px
 }
 
 .day_night {
@@ -51,9 +51,11 @@ body {
 }
 
 .forecast_temp_day {
+  display: flex;
   font-weight: 400;
   font-size: 24px;
   padding-right: 16px;
+  align-items: center;
 }
 
 .forecast_temp_night {
@@ -62,7 +64,6 @@ body {
   font-weight: 400;
   font-size: 18px;
   opacity: 0.5;
-
 }
 
 .current_description {

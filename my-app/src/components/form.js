@@ -27,7 +27,9 @@ class Form extends React.Component {
         if (!weatherDataWeek) return <div>Loading</div>;
 
         const weather = weatherData.weather[0];
-
+        const Description = weatherData.weather[0]['description'];
+        const upperDescription =  Description[0].toUpperCase() + Description.slice(1);
+       
         const weatherWeekFirst = weatherDataWeek.daily[0].weather[0];
         const weatherWeekSecond = weatherDataWeek.daily[1].weather[0];
         const weatherWeekThird = weatherDataWeek.daily[2].weather[0];
@@ -63,15 +65,15 @@ class Form extends React.Component {
         const localizedSunrise = dateSunrise.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
         const localizedSunset = dateSunset.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-        const iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
+        const iconUrl = "http://openweathermap.org/img/wn/" + weather.icon + "@2x.png";
 
-        const iconUrlFirstDay = "http://openweathermap.org/img/w/" + weatherWeekFirst.icon + ".png";
-        const iconUrlSecondDay = "http://openweathermap.org/img/w/" + weatherWeekSecond.icon + ".png";
-        const iconUrlThirdDay = "http://openweathermap.org/img/w/" + weatherWeekThird.icon + ".png";
-        const iconUrlFourthDay = "http://openweathermap.org/img/w/" + weatherWeekFourth.icon + ".png";
-        const iconUrlFifthDay = "http://openweathermap.org/img/w/" + weatherWeekFifth.icon + ".png";
-        const iconUrlSixthDay = "http://openweathermap.org/img/w/" + weatherWeekSixth.icon + ".png";
-        const iconUrlSeventhDay = "http://openweathermap.org/img/w/" + weatherWeekSeventh.icon + ".png";
+        const iconUrlFirstDay = "http://openweathermap.org/img/wn/" + weatherWeekFirst.icon + "@2x.png";
+        const iconUrlSecondDay = "http://openweathermap.org/img/wn/" + weatherWeekSecond.icon + "@2x.png";
+        const iconUrlThirdDay = "http://openweathermap.org/img/wn/" + weatherWeekThird.icon + "@2x.png";
+        const iconUrlFourthDay = "http://openweathermap.org/img/wn/" + weatherWeekFourth.icon + "@2x.png";
+        const iconUrlFifthDay = "http://openweathermap.org/img/wn/" + weatherWeekFifth.icon + "@2x.png";
+        const iconUrlSixthDay = "http://openweathermap.org/img/wn/" + weatherWeekSixth.icon + "@2x.png";
+        const iconUrlSeventhDay = "http://openweathermap.org/img/wn/" + weatherWeekSeventh.icon + "@2x.png";
 
 
         return (
@@ -82,7 +84,7 @@ class Form extends React.Component {
                         <img src={iconUrl} alt={weatherData.description} width="120" height="120" />
                         <div className="current_temp">{Math.round(weatherData.main.temp) + '°'}</div>
                     </div>
-                    <div className="current_description">{weatherData.weather[0]['description']}</div>
+                    <div className="current_description">{upperDescription}</div>
                 </div>
                 <div className="forecast_name">По дням</div>
                 <div className="forecast">
