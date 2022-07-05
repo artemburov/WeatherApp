@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+/* Недоступно для анализа если все стили в одном файле */
 body {
   margin: 0;
   background-image: url(/src/img/background.jpg);
@@ -128,8 +129,9 @@ body {
   font-size: 14px;
 }
 
+/* будь внимателен у тебя дублирование стилей */
 .details_col {
-  display: flex;
+  display: flex; 
   flex-direction: row;
   padding-right: 100px;
   display: flex;

@@ -1,8 +1,8 @@
 import React from "react";
-import png from './subtract.png';
+import png from './subtract.png'; // У тебя есть папка с картинками зачем положил нетуда? 
 import vector from './vector.png';
 
-class Form extends React.Component {
+class Form extends React.Component { // Классовые компоненты в реакт считаются устаревшими
     constructor() {
         super();
         this.state = {
@@ -11,8 +11,10 @@ class Form extends React.Component {
         };
     }
     componentDidMount() {
-        const URL = "https://api.openweathermap.org/data/2.5/weather?lat=54.21386&lon=49.61838&appid=c8444dc8bbd22ee9ef81d984eac56f8a&units=metric&lang=ru";
+        // В константу. Из URL вытащи данные и собирай URL через шаблонные строки
+        const URL = "https://api.openweathermap.org/data/2.5/weather?lat=54.21386&lon=49.61838&appid=c8444dc8bbd22ee9ef81d984eac56f8a&units=metric&lang=ru"; 
         const URLweek = "https://api.openweathermap.org/data/2.5/onecall?lat=54.21386&lon=49.61838&appid=c8444dc8bbd22ee9ef81d984eac56f8a&units=metric&lang=ru";
+        // Логику работы с апи лучше выносить из компоненты
         fetch(URL).then(fetch(URL)).then(res => res.json()).then(json => {
             this.setState({ weatherData: json })
         });
@@ -21,15 +23,20 @@ class Form extends React.Component {
         });
     }
     render() {
+        // weatherData = this.state.weatherData Зачем?
         const weatherData = this.state.weatherData;
         const weatherDataWeek = this.state.weatherDataWeek;
+        // Условия можно и нужно обьединить
         if (!weatherData) return <div>Loading</div>;
         if (!weatherDataWeek) return <div>Loading</div>;
 
         const weather = weatherData.weather[0];
+        // Соблюдай стилизацию названия переменных
         const Description = weatherData.weather[0]['description'];
+        // Это лучше в функцию
         const upperDescription =  Description[0].toUpperCase() + Description.slice(1);
        
+        // Ошибка. Необходимо делать map массива 
         const weatherWeekFirst = weatherDataWeek.daily[0].weather[0];
         const weatherWeekSecond = weatherDataWeek.daily[1].weather[0];
         const weatherWeekThird = weatherDataWeek.daily[2].weather[0];
@@ -75,6 +82,11 @@ class Form extends React.Component {
         const iconUrlSixthDay = "http://openweathermap.org/img/wn/" + weatherWeekSixth.icon + "@2x.png";
         const iconUrlSeventhDay = "http://openweathermap.org/img/wn/" + weatherWeekSeventh.icon + "@2x.png";
 
+        // Ну это никуда не годится. Я первый раз кому-то пишу замечание из-за кол-ва переменных.
+        // Отсутствие маба очень грубая ошибка и выдает топорность новичка. Советую незамедлительно исправить.
+
+        //  у изображений width="60" height="60"  лучше задавать через css
+        // alt важный атрибут у изображений. Не забывай его 
 
         return (
             <form>
