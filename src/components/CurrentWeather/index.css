@@ -1,0 +1,29 @@
+.current {
+    margin-top: 64px;
+    text-align: center;
+    margin-bottom: 81px;
+  }
+  
+  .current_city {
+    font-size: 36px;
+  }
+
+  .current_temp {
+    font-size: 96px;
+    font-weight: 300;
+  }
+
+  .current_description {
+    font-size: 24px;
+  }
+
+  .temp_icon {
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 43%;
+  }
+
+  .img{
+    width: 120px;
+    height: 120px;
+  }
