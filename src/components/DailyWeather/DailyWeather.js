@@ -8,6 +8,9 @@ function DailyWeather({dailyWeather}) {
     return null
   }
 
+  let today = dailyWeather[0].dt;
+  let tommorow = dailyWeather[1].dt;
+  
   return (
     <div className="DailyWeather">
       <span className='forecast_name'>По дням</span>
@@ -18,6 +21,8 @@ function DailyWeather({dailyWeather}) {
             forecast_temp_night={day.temp.night}
             dt={day.dt}
             icon_day={day.weather[0].icon} 
+            today = {today}
+            tommorow = {tommorow}
             />
         })}
       </div>

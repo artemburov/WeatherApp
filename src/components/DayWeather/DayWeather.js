@@ -1,10 +1,17 @@
 import React from 'react';
 import './index.css';
 
-function DayWeather({forecast_temp_day, forecast_temp_night, dt, icon_day}) {
+function DayWeather({forecast_temp_day, forecast_temp_night, dt, icon_day, today, tommorow}) {
    
     let dateOfday = new Date(dt * 1000)
     let localizedDate = dateOfday.toLocaleDateString(["ru-RU"], { day: 'numeric', weekday: 'short' });
+
+    if (dt == today){
+        localizedDate = 'Сегодня'
+    }
+    if (dt == tommorow){
+        localizedDate = 'Завтра'
+    }
 
     const new_icon_day = `http://openweathermap.org/img/wn/${icon_day}@2x.png`
 

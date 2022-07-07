@@ -1,15 +1,11 @@
 import React from 'react';
 import './index.css';
+import {FuncBigLetter} from "./utils";
 
 function CurrentWeather({ weatherData }) {
 
     if (weatherData.weather === undefined) {
         return null
-    }
-
-    function FuncBigLetter(str) {
-        if (!str) return str;
-        return str[0].toUpperCase() + str.slice(1);
     }
 
     const upperDescription = FuncBigLetter(weatherData.weather[0].description)
